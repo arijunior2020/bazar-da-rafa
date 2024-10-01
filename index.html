@@ -159,6 +159,19 @@
         border-top: 2px solid #ff69b4; /* Rosa brilhante no rodapé */
       }
 
+      footer a {
+        color: #ff69b4; /* Cor rosa para o ícone */
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #ff1493 !important; /* Cor mais escura ao passar o mouse */
+      }
+
+      footer i {
+        font-size: 1.5rem; /* Tamanho maior para o ícone */
+      }
+
       body.light-theme footer {
         background-color: #f8f9fa;
         color: #000;
@@ -431,6 +444,10 @@
 
     <footer class="bg-dark text-white text-center py-3 mt-4">
       <p>&copy; 2024 Bazar Feminino. Todos os direitos reservados.</p>
+      <a href="#top" class="text-decoration-none text-white">
+        <i class="fas fa-arrow-up"></i>
+        <!-- Ícone de seta para cima -->
+      </a>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
