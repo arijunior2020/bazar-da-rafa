@@ -130,12 +130,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#">Roupas</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Acessórios</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Sapatos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="#OfertasEspeciais">Ofertas Especiais</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Destaques">Destaque</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://api.whatsapp.com/send?phone=5585987764006&text=Olá%20Gostaria%20de%20falar%20com%20você!" class="text-decoration-none" target="_blank"">Contato</a></li>
           </ul>
         </div>
       </div>
@@ -189,7 +186,7 @@
     </div>
 
     <div class="container mt-4">
-      <h2 class="text-center mb-4">Ofertas Especiais</h2>
+      <h2 class="text-center mb-4" id="OfertasEspeciais">Ofertas Especiais</h2>
       <div id="ofertasCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -197,6 +194,7 @@
               src="assets/img/vestido-floral.png"
               class="d-block w-80 mx-auto"
               alt="Vestido Floral"
+              style="height: 450px; object-fit: cover; border-radius: 15px;"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Vestido Floral</h5>
@@ -208,6 +206,7 @@
               src="assets/img/foto-bolsa-couro01.png"
               class="d-block w-80 mx-auto"
               alt="Bolsa de Couro"
+              style="height: 450px; object-fit: cover; border-radius: 15px;"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Bolsa de Couro</h5>
@@ -219,6 +218,7 @@
               src="assets/img/sapato-alto-feminino.webp"
               class="d-block w-80 mx-auto"
               alt="Sapato Salto Alto"
+              style="height: 450px; object-fit: cover; border-radius: 15px;"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Sapato Salto Alto</h5>
@@ -249,7 +249,7 @@
 
     <div class="featured-items mt-4">
       <div class="container">
-        <h2 class="text-center mb-4">Destaques</h2>
+        <h2 class="text-center mb-4" id="Destaques">Destaques</h2>
         <div class="row">
           <div class="col-md-3">
             <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Vestido%20Floral%20por%20R$%2089,90" class="text-decoration-none" target="_blank">
@@ -325,7 +325,7 @@
         </div>
       </div>
     </div>
-
+    
     <footer class="bg-dark text-white text-center py-3 mt-4">
       <p>&copy; 2023 Bazar Feminino. Todos os direitos reservados.</p>
     </footer>
