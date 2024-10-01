@@ -13,6 +13,12 @@
       rel="stylesheet"
     />
 
+    <!--Biblioteca Fonte AweSome-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         font-family: "Poppins", Arial, sans-serif;
@@ -22,6 +28,12 @@
           #1a1a1a
         ); /* Fundo preto brilhante */
         color: #fff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      body.light-theme {
+        background: #ffffff; /* Fundo branco no tema claro */
+        color: #000; /* Texto preto no tema claro */
       }
 
       .navbar {
@@ -33,9 +45,25 @@
         box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4);
       }
 
+      /* Manter a navbar com o gradiente rosa */
+      .navbar.light-theme {
+        background: linear-gradient(
+          45deg,
+          #ff1493,
+          #ff69b4
+        ); /* Gradiente de rosa brilhante no tema claro */
+        color: #fff; /* Texto branco na navbar */
+      }
+
       .navbar-brand,
       .nav-link {
         color: #ffffff !important;
+      }
+
+      /* Removido o fundo branco da navbar e mantido o degradê rosa */
+      .navbar.light-theme .navbar-brand,
+      .navbar.light-theme .nav-link {
+        color: #fff !important;
       }
 
       .jumbotron {
@@ -50,12 +78,27 @@
         border-radius: 10px;
       }
 
+      body.light-theme .jumbotron {
+        background: linear-gradient(
+          135deg,
+          #ffffff,
+          #ff69b4
+        ); /* Claro para rosa brilhante */
+        color: #000;
+      }
+
       .card {
         margin-bottom: 1.5rem;
         background-color: #1a1a1a; /* Preto mais leve */
         color: #ffffff;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: none;
+      }
+
+      body.light-theme .card {
+        background-color: #ffffff;
+        color: #000;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
       }
 
       .card:hover {
@@ -70,9 +113,9 @@
         transition: background-color 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .bg-pink {
-        background-color: #ff69b4; /* Rosa brilhante */
-        color: white;
+      body.light-theme .btn-primary {
+        background-color: #ff1493;
+        border-color: #ff1493;
       }
 
       .btn-primary:hover {
@@ -103,6 +146,11 @@
         color: white;
       }
 
+      body.light-theme .location-section {
+        background-color: #ffffff;
+        color: #000;
+      }
+
       footer {
         background-color: #000000;
         color: #ffffff;
@@ -111,8 +159,17 @@
         border-top: 2px solid #ff69b4; /* Rosa brilhante no rodapé */
       }
 
-      footer p {
-        margin: 0;
+      body.light-theme footer {
+        background-color: #f8f9fa;
+        color: #000;
+      }
+
+      .lightbulb-on {
+        color: black; /* Ícone preto quando ligado */
+      }
+
+      .lightbulb-off {
+        color: #ffffff; /* Ícone branco quando desligado */
       }
     </style>
   </head>
@@ -130,31 +187,64 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#OfertasEspeciais">Ofertas Especiais</a></li>
-            <li class="nav-item"><a class="nav-link" href="#Destaques">Destaque</a></li>
-            <li class="nav-item"><a class="nav-link" href="https://api.whatsapp.com/send?phone=5585987764006&text=Olá%20Gostaria%20de%20falar%20com%20você!" class="text-decoration-none" target="_blank"">Contato</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#OfertasEspeciais">Ofertas Especiais</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Destaques">Destaque</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://api.whatsapp.com/send?phone=5585987764006&text=Olá%20Gostaria%20de%20falar%20com%20você!"
+                class="text-decoration-none"
+                target="_blank"
+                >Contato</a
+              >
+            </li>
+            <!-- Toggle de tema -->
+            <li class="nav-item">
+              <button id="themeToggle" class="btn btn-outline-light ms-3">
+                <i id="themeIcon" class="fas fa-lightbulb lightbulb-off"></i>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="jumbotron text-center">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h1 class="display-4">Bazar 2024</h1>
-            <p class="lead">
-              Encontre as melhores ofertas em roupas, acessórios e sapatos!
-            </p>
-          </div>
-          <div class="col-md-6">
-            <div class="d-flex justify-content-around">
-              <img src="/assets/img/foto-rafa01.jpeg" class="img-fluid rounded-circle" alt="Rafa" style="width: 150px; height: 150px; object-fit: cover;">
-              <img src="/assets/img/foto-rafa02.jpeg" class="img-fluid rounded-circle" alt="Rafa" style="width: 150px; height: 150px; object-fit: cover;">
-              <img src="/assets/img/foto-rafa03.jpeg" class="img-fluid rounded-circle" alt="Rafa" style="width: 150px; height: 150px; object-fit: cover;">
-            </div>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="display-4">Bazar 2024</h1>
+          <p class="lead">
+            Encontre as melhores ofertas em roupas, acessórios e sapatos!
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex justify-content-around">
+            <img
+              src="/assets/img/foto-rafa01.jpeg"
+              class="img-fluid rounded-circle"
+              alt="Rafa"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
+            <img
+              src="/assets/img/foto-rafa02.jpeg"
+              class="img-fluid rounded-circle"
+              alt="Rafa"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
+            <img
+              src="/assets/img/foto-rafa03.jpeg"
+              class="img-fluid rounded-circle"
+              alt="Rafa"
+              style="width: 150px; height: 150px; object-fit: cover"
+            />
           </div>
         </div>
       </div>
+    </div>
 
     <div class="location-section mt-4">
       <div class="container">
@@ -194,7 +284,7 @@
               src="assets/img/vestido-floral.png"
               class="d-block w-80 mx-auto"
               alt="Vestido Floral"
-              style="height: 450px; object-fit: cover; border-radius: 15px;"
+              style="height: 450px; object-fit: cover; border-radius: 15px"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Vestido Floral</h5>
@@ -206,7 +296,7 @@
               src="assets/img/foto-bolsa-couro01.png"
               class="d-block w-80 mx-auto"
               alt="Bolsa de Couro"
-              style="height: 450px; object-fit: cover; border-radius: 15px;"
+              style="height: 450px; object-fit: cover; border-radius: 15px"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Bolsa de Couro</h5>
@@ -218,7 +308,7 @@
               src="assets/img/sapato-alto-feminino.webp"
               class="d-block w-80 mx-auto"
               alt="Sapato Salto Alto"
-              style="height: 450px; object-fit: cover; border-radius: 15px;"
+              style="height: 450px; object-fit: cover; border-radius: 15px"
             />
             <div class="carousel-caption d-none d-md-block">
               <h5>Sapato Salto Alto</h5>
@@ -252,157 +342,127 @@
         <h2 class="text-center mb-4" id="Destaques">Destaques</h2>
         <div class="row">
           <div class="col-md-3">
-            <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Vestido%20Floral%20por%20R$%2089,90" class="text-decoration-none" target="_blank">
-                <div class="card">
-                  <img
-                    src="assets/img/vestido-floral.png"
-                    class="card-img-top"
-                    alt="Vestido Floral"
-                    style="height: 300px; object-fit: cover;"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Vestido Floral</h5>
-                    <p class="card-text">R$ 89,90</p>
-                    <span class="btn btn-primary">Comprar</span>
-                  </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Vestido%20Floral%20por%20R$%2089,90"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <div class="card">
+                <img
+                  src="assets/img/vestido-floral.png"
+                  class="card-img-top"
+                  alt="Vestido Floral"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Vestido Floral</h5>
+                  <p class="card-text">R$ 89,90</p>
+                  <span class="btn btn-primary">Comprar</span>
                 </div>
-              </a>
+              </div>
+            </a>
           </div>
           <div class="col-md-3">
-            <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20a%20Bolsa%20de%20Couro%20por%20R$%20129,90" class="text-decoration-none" target="_blank">
-                <div class="card">
-                  <img
-                    src="assets/img/foto-bolsa-couro01.png"
-                    class="card-img-top"
-                    alt="Bolsa de Couro"
-                    style="height: 300px; object-fit: cover;"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Bolsa de Couro</h5>
-                    <p class="card-text">R$ 129,90</p>
-                    <span class="btn btn-primary">Comprar</span>
-                  </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20a%20Bolsa%20de%20Couro%20por%20R$%20129,90"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <div class="card">
+                <img
+                  src="assets/img/foto-bolsa-couro01.png"
+                  class="card-img-top"
+                  alt="Bolsa de Couro"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Bolsa de Couro</h5>
+                  <p class="card-text">R$ 129,90</p>
+                  <span class="btn btn-primary">Comprar</span>
                 </div>
-              </a>
-              
+              </div>
+            </a>
           </div>
           <div class="col-md-3">
-            <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Sapato%20Salto%20Alto%20por%20R$%20159,90" class="text-decoration-none" target="_blank">
-                <div class="card">
-                  <img
-                    src="assets/img/sapato-alto-feminino.webp"
-                    class="card-img-top"
-                    alt="Sapato Salto Alto"
-                    style="height: 300px; object-fit: cover;"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Sapato Salto Alto</h5>
-                    <p class="card-text">R$ 159,90</p>
-                    <span class="btn btn-primary">Comprar</span>
-                  </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Sapato%20Salto%20Alto%20por%20R$%20159,90"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <div class="card">
+                <img
+                  src="assets/img/sapato-alto-feminino.webp"
+                  class="card-img-top"
+                  alt="Sapato Salto Alto"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Sapato Salto Alto</h5>
+                  <p class="card-text">R$ 159,90</p>
+                  <span class="btn btn-primary">Comprar</span>
                 </div>
-              </a>
-              
+              </div>
+            </a>
           </div>
           <div class="col-md-3">
-            <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Colar%20de%20Pérolas%20por%20R$%2079,90" class="text-decoration-none" target="_blank">
-                <div class="card">
-                  <img
-                    src="assets/img/colar de perolas.webp"
-                    class="card-img-top"
-                    alt="Colar de Pérolas"
-                    style="height: 300px; object-fit: cover;"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Colar de Pérolas</h5>
-                    <p class="card-text">R$ 79,90</p>
-                    <span class="btn btn-primary">Comprar</span>
-                  </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Colar%20de%20Pérolas%20por%20R$%2079,90"
+              class="text-decoration-none"
+              target="_blank"
+            >
+              <div class="card">
+                <img
+                  src="assets/img/colar de perolas.webp"
+                  class="card-img-top"
+                  alt="Colar de Pérolas"
+                  style="height: 300px; object-fit: cover"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Colar de Pérolas</h5>
+                  <p class="card-text">R$ 79,90</p>
+                  <span class="btn btn-primary">Comprar</span>
                 </div>
-              </a>
+              </div>
+            </a>
           </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-3">
-              <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Vestido%20Floral%20por%20R$%2089,90" class="text-decoration-none" target="_blank">
-                  <div class="card">
-                    <img
-                      src="assets/img/vestido-floral.png"
-                      class="card-img-top"
-                      alt="Vestido Floral"
-                      style="height: 300px; object-fit: cover;"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Vestido Floral</h5>
-                      <p class="card-text">R$ 89,90</p>
-                      <span class="btn btn-primary">Comprar</span>
-                    </div>
-                  </div>
-                </a>
-            </div>
-            <div class="col-md-3">
-              <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20a%20Bolsa%20de%20Couro%20por%20R$%20129,90" class="text-decoration-none" target="_blank">
-                  <div class="card">
-                    <img
-                      src="assets/img/foto-bolsa-couro01.png"
-                      class="card-img-top"
-                      alt="Bolsa de Couro"
-                      style="height: 300px; object-fit: cover;"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Bolsa de Couro</h5>
-                      <p class="card-text">R$ 129,90</p>
-                      <span class="btn btn-primary">Comprar</span>
-                    </div>
-                  </div>
-                </a>
-                
-            </div>
-            <div class="col-md-3">
-              <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Sapato%20Salto%20Alto%20por%20R$%20159,90" class="text-decoration-none" target="_blank">
-                  <div class="card">
-                    <img
-                      src="assets/img/sapato-alto-feminino.webp"
-                      class="card-img-top"
-                      alt="Sapato Salto Alto"
-                      style="height: 300px; object-fit: cover;"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Sapato Salto Alto</h5>
-                      <p class="card-text">R$ 159,90</p>
-                      <span class="btn btn-primary">Comprar</span>
-                    </div>
-                  </div>
-                </a>
-                
-            </div>
-            <div class="col-md-3">
-              <a href="https://api.whatsapp.com/send?phone=5585987764006&text=Gostaria%20de%20comprar%20o%20Colar%20de%20Pérolas%20por%20R$%2079,90" class="text-decoration-none" target="_blank">
-                  <div class="card">
-                    <img
-                      src="assets/img/colar de perolas.webp"
-                      class="card-img-top"
-                      alt="Colar de Pérolas"
-                      style="height: 300px; object-fit: cover;"
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Colar de Pérolas</h5>
-                      <p class="card-text">R$ 79,90</p>
-                      <span class="btn btn-primary">Comprar</span>
-                    </div>
-                  </div>
-                </a>
-            </div>
-          </div>
-
       </div>
     </div>
-    
+
     <footer class="bg-dark text-white text-center py-3 mt-4">
       <p>&copy; 2024 Bazar Feminino. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para alternar entre temas -->
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const themeIcon = document.getElementById("themeIcon");
+      const body = document.body;
+      const navbar = document.querySelector(".navbar");
+      const jumbotron = document.querySelector(".jumbotron");
+      const cards = document.querySelectorAll(".card");
+      const footer = document.querySelector("footer");
+
+      themeToggle.addEventListener("click", () => {
+        body.classList.toggle("light-theme");
+        navbar.classList.toggle("light-theme");
+        jumbotron.classList.toggle("light-theme");
+        footer.classList.toggle("light-theme");
+
+        cards.forEach((card) => {
+          card.classList.toggle("light-theme");
+        });
+
+        if (body.classList.contains("light-theme")) {
+          themeIcon.classList.remove("lightbulb-off");
+          themeIcon.classList.add("lightbulb-on");
+        } else {
+          themeIcon.classList.remove("lightbulb-on");
+          themeIcon.classList.add("lightbulb-off");
+        }
+      });
+    </script>
   </body>
 </html>
