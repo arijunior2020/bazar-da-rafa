@@ -1,0 +1,164 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #1a1a1a
+  ); /* Fundo preto brilhante */
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-theme {
+  background: #ffffff; /* Fundo branco no tema claro */
+  color: #000; /* Texto preto no tema claro */
+}
+
+.navbar {
+  background: linear-gradient(
+    45deg,
+    #ff1493,
+    #ff69b4
+  ); /* Degradê de rosa brilhante */
+  box-shadow: 0 4px 8px rgba(255, 20, 147, 0.4);
+}
+
+/* Manter a navbar com o gradiente rosa */
+.navbar.light-theme {
+  background: linear-gradient(
+    45deg,
+    #ff1493,
+    #ff69b4
+  ); /* Gradiente de rosa brilhante no tema claro */
+  color: #fff; /* Texto branco na navbar */
+}
+
+.navbar-brand,
+.nav-link {
+  color: #ffffff !important;
+}
+
+/* Removido o fundo branco da navbar e mantido o degradê rosa */
+.navbar.light-theme .navbar-brand,
+.navbar.light-theme .nav-link {
+  color: #fff !important;
+}
+
+.jumbotron {
+  background: linear-gradient(
+    135deg,
+    #000000,
+    #ff69b4
+  ); /* Preto para rosa brilhante */
+  color: white;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.6);
+  border-radius: 10px;
+}
+
+body.light-theme .jumbotron {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #ff69b4
+  ); /* Claro para rosa brilhante */
+  color: #000;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  background-color: #1a1a1a; /* Preto mais leve */
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+body.light-theme .card {
+  background-color: #ffffff;
+  color: #000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4); /* Sombra rosa brilhante */
+}
+
+.btn-primary {
+  background-color: #ff69b4; /* Rosa brilhante */
+  border-color: #ff69b4;
+  color: white;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.light-theme .btn-primary {
+  background-color: #ff1493;
+  border-color: #ff1493;
+}
+
+.btn-primary:hover {
+  background-color: #ff1493;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.6); /* Sombra rosa brilhante */
+}
+
+.carousel-caption {
+  background-color: rgba(255, 20, 147, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 450px;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+.location-section {
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+  color: white;
+}
+
+body.light-theme .location-section {
+  background-color: #ffffff;
+  color: #000;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 2px solid #ff69b4; /* Rosa brilhante no rodapé */
+}
+
+footer a {
+  color: #ff69b4; /* Cor rosa para o ícone */
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff1493 !important; /* Cor mais escura ao passar o mouse */
+}
+
+footer i {
+  font-size: 1.5rem; /* Tamanho maior para o ícone */
+}
+
+body.light-theme footer {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+.lightbulb-on {
+  color: black; /* Ícone preto quando ligado */
+}
+
+.lightbulb-off {
+  color: #ffffff; /* Ícone branco quando desligado */
+}
