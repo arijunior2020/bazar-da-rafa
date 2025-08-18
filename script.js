@@ -34,53 +34,548 @@ const WA_PHONE = "5585987764006";
 // Dados (adicione/edite aqui)
 const products = [
   // FEMININO
-  { id: "conjunto-feminino", title: "Conjunto Feminino", price: 40.0, image: "assets/img/fotos-femininas/Conjunto Feminino.jpeg", category: "feminino" },
-  { id: "bolsa-night",       title: "Bolsa Night", price: 50.0, image: "assets/img/fotos-femininas/Bolsa Night.jpeg", category: "feminino", stock: 0 }, // ESGOTADO
-  { id: "body-feminino",     title: "Body", price: 10.0, image: "assets/img/fotos-femininas/Body.jpeg", category: "feminino" },
-  { id: "cropped-prateado",  title: "Cropped Brilhoso Prateado", price: 20.0, image: "assets/img/fotos-femininas/croped-brilhoso-prateado.jpeg", category: "feminino" },
-  { id: "cinta-preta",       title: "Cinta Preta", price: 15.0, image: "assets/img/fotos-femininas/cinta-feminina-preta.jpeg", category: "feminino" },
-  { id: "cropped-verde",     title: "Cropped", price: 15.0, image: "assets/img/fotos-femininas/Cropped Verde.jpeg", category: "feminino" },
-  { id: "cropped",           title: "Cropped", price: 15.0, image: "assets/img/fotos-femininas/Cropped.jpeg", category: "feminino" },
-  { id: "macacao-estampado", title: "Macacão Estampado", price: 20.0, image: "assets/img/fotos-femininas/Macacão Estampado.jpeg", category: "feminino" },
-  { id: "macacao-verde",     title: "Macacão Verde", price: 15.0, image: "assets/img/fotos-femininas/Macacão Verde.jpeg", category: "feminino" },
-  { id: "macacao-vermelho",  title: "Macacão Vermelho", price: 15.0, image: "assets/img/fotos-femininas/Macacçao Vermelho.jpeg", category: "feminino" },
-  { id: "saia-saida",        title: "Saia", price: 15.0, image: "assets/img/fotos-femininas/Saia de Saida.jpeg", category: "feminino" },
-  { id: "saia",              title: "Saia", price: 15.0, image: "assets/img/fotos-femininas/Saia.jpeg", category: "feminino" },
-  { id: "sandalia-shutz",    title: "Sandália Shutz", price: 20.0, image: "assets/img/fotos-femininas/Sandália Shutz.jpeg", category: "feminino", badge: "37/38" },
-  { id: "short-verde",       title: "Short Verde", price: 10.0, image: "assets/img/fotos-femininas/WhatsApp Image 2024-10-04 at 12.05.03.jpeg", category: "feminino" },
-  { id: "short-feminino",    title: "Short", price: 10.0, image: "assets/img/fotos-femininas/Short.jpeg", category: "feminino" },
-  { id: "vestido-verde",     title: "Vestido", price: 20.0, image: "assets/img/fotos-femininas/Vestido Verde.jpeg", category: "feminino" },
+  // ===== FEMININO (simples) =====
+    {
+      id: "blusa-feminina-amarela-2025",
+      title: "Blusa Feminina Amarela",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusa-feminina-amarela-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusa-feminina-laranja-2025",
+      title: "Blusa Feminina Laranja",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusa-feminina-laranja-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusa-feminina-rosa-2025",
+      title: "Blusa Feminina Rosa",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusa-feminina-rosa-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusa-feminina-verde-claro-tam-g-2025",
+      title: "Blusa Feminina Verde Claro",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusa-feminina-verde-claro-tam-g-2025.jpg",
+      category: "feminino",
+      badge: "G"
+    },
+    {
+      id: "blusa-feminina-verde-escuro-2025",
+      title: "Blusa Feminina Verde Escuro",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/blusa-feminina-verde-escuro-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-diversas-feminina-2025",
+      title: "Blusas Diversas Feminina",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-diversas-feminina-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-diversas-feminina2-2025",
+      title: "Blusas Diversas Feminina",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-diversas-feminina2-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-diversas-femininas-2025",
+      title: "Blusas Diversas Femininas",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-diversas-feminina3-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-diversas-tam-g-2025",
+      title: "Blusas Diversas",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-diversas-tam-g-2025.jpg",
+      category: "feminino",
+      badge: "G"
+    },
+    {
+      id: "blusas-femininas-diversas-2025",
+      title: "Blusas Femininas Diversas",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-femininas-diversas-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-femininas-diversas2-2025",
+      title: "Blusas Femininas Diversas 2",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-diversas-feminina2-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-femininas-tam-u-2025",
+      title: "Blusas Femininas",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-femininas-tam-u-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "blusas-femininas-variedades-2025",
+      title: "Blusas Femininas Variedades",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-femininas-variadas-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "blusas-femininas-variadas-2-2025",
+      title: "Blusas Femininas Variadas 2",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/blusas-femininas-variadas2-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "body-claro-2025",
+      title: "Body Claro",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/body-claro-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "calca-feminina-preta-g-2025",
+      title: "Calça Feminina Preta",
+      price: 35.0,
+      image: "assets/img/fotos-femininas/calca-feminina-preta-g-2025.jpg",
+      category: "feminino",
+      badge: "G"
+    },
+    {
+      id: "calca-feminina-verde-m-2025",
+      title: "Calça Feminina Verde",
+      price: 35.0,
+      image: "assets/img/fotos-femininas/calca-feminina-verde-m-2025.jpg",
+      category: "feminino",
+      badge: "M"
+    },
+    {
+      id: "conj-feminino-laranja-2025",
+      title: "Conjunto Feminino Laranja",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/conj-feminino-laranja-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conj-feminino-preto-2025",
+      title: "Conjunto Feminino Preto",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/conj-feminino-preto-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conj-feminino-preto2-2025",
+      title: "Conjunto Feminino Preto Triplo",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/conj-feminino-preto2-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conj-feminino-verde-2025",
+      title: "Conjunto Feminino Verde",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/conj-feminino-verde-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conj-verde-vinho-2025",
+      title: "Conjunto Verde/Vinho",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/conj-verde-vinho-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conjunto-croped-brilhoso-2025",
+      title: "Conjunto Cropped Brilhoso",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/conjunto-croped-brilhoso-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "conjunto-croped-preto-2025",
+      title: "Conjunto Cropped Preto",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/conjunto-croped-preto-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "croped-azul-tam-unico-2025",
+      title: "Cropped Azul",
+      price: 10.0,
+      image: "assets/img/fotos-femininas/croped-azul-tam-unico-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "croped-diversos-tam-u-2025",
+      title: "Cropped Diversos",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/croped-diversos-tam-u-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "croped-estampado-branco-tam-u-2025",
+      title: "Cropped Estampado Branco",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/croped-estampado-branco-tam-u-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "croped-estampado-preto-2025",
+      title: "Cropped Estampado Preto",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/croped-estampado-preto-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "croped-estampado-preto-tam-m-2025",
+      title: "Cropped Estampado Preto",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/croped-estampado-preto-tam-m-2025.jpg",
+      category: "feminino",
+      badge: "M"
+    },
+    {
+      id: "croped-tam-u-2025",
+      title: "Cropped",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/croped-tam-u-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "saia-diversas-2025",
+      title: "Saias Diversas",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/saia-diversas-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "saia-laranja-2025",
+      title: "Saia Laranja",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/saia-laranja-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "saia-longa-preta-2025",
+      title: "Saia Longa Preta",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/saia-longa-preta-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "saia-preta-tam-unico-2025",
+      title: "Saia Preta",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/saia-preta-tam-unico-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "saia-vinho-2025",
+      title: "Saia Vinho",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/saia-vinho-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-diversos-2025",
+      title: "Short Diversos",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-diversos-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-bege-2025",
+      title: "Short Feminino Bege",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/short-feminino-bege-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-bege2-2025",
+      title: "Short Feminino Bege 2",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/short-feminino-bege2-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-cinza-2025",
+      title: "Short Feminino Cinza",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/short-feminino-cinza-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-cinza-com-bolso-2025",
+      title: "Short Feminino Cinza com Bolso",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/short-feminino-cinza-com-bolso-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-laranja-gg-2025",
+      title: "Short Feminino Laranja",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-feminino-laranja-GG-2025.jpg",
+      category: "feminino",
+      badge: "GG"
+    },
+    {
+      id: "short-feminino-marrom-2025",
+      title: "Short Feminino Marrom",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-feminino-marrom-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-marrom-gg-2025",
+      title: "Short Feminino Marrom",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-feminino-marrom-GG-2025.jpg",
+      category: "feminino",
+      badge: "GG"
+    },
+    {
+      id: "short-feminino-vermelho-tam-2025",
+      title: "Short Feminino Vermelho",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-feminino-vermelho-tam-p-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-feminino-2025",
+      title: "Short Feminino Vinho",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-feminino-vinho-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-jeans-feminino-estampado-2025",
+      title: "Short Jeans Feminino Estampado",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-jeans-feminino-estampado-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-jeans-feminino-estiloso-tam-38-2025",
+      title: "Short Jeans Feminino Estiloso",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-jeans-feminino-estiloso-tam-38-2025.jpg",
+      category: "feminino",
+      badge: "38"
+    },
+    {
+      id: "short-jeans-feminino-estiloso2-tam-38-2025",
+      title: "Short Jeans Feminino Estiloso 2",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-jeans-feminino-estiloso2-tam-38-2025.jpg",
+      category: "feminino",
+      badge: "38"
+    },
+    {
+      id: "short-jeans-feminino-tam-38-2025",
+      title: "Short Jeans Feminino",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-jeans-feminino-tam-38-2025.jpg",
+      category: "feminino",
+      badge: "38"
+    },
+    {
+      id: "short-jeans-feminino-tam-46-2025",
+      title: "Short Jeans Feminino",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/short-jeans-feminino-tam-46-2025.jpg",
+      category: "feminino",
+      badge: "46"
+    },
+    {
+      id: "short-jeans-plus-size-tam-52-2025",
+      title: "Short Jeans Plus Size",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/short-jeans-plus-size-tam-52-2025.jpg",
+      category: "feminino",
+      badge: "52"
+    },
+    {
+      id: "short-lilas-2025",
+      title: "Short Lilás",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-lilas-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-lilas-botao-2025",
+      title: "Short Lilás Botão",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-lilas-botao-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-lilas-com-botao-2025",
+      title: "Short Lilás com Botão",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-lilas-com-botao-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-lilas-g-2025",
+      title: "Short Lilás",
+      price: 12.0,
+      image: "assets/img/fotos-femininas/short-lilas-g-2025.jpg",
+      category: "feminino",
+      badge: "G"
+    },
+    {
+      id: "short-marrom-feminino-2025",
+      title: "Short Marrom Feminino",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-marrom-feminino-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-preto-2025",
+      title: "Short Preto",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/short-preto-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "short-verde-2025",
+      title: "Short Verde",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/short-verde-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-verde-girls-summer",
+      title: "Vestido Verde Girls Summer",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/Vestido Verde Girls Summer.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-estampado-azul-tam-g-2025",
+      title: "Vestido Estampado Azul",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/vestido-estampado-azul-tam-g-2025.jpg",
+      category: "feminino",
+      badge: "G"
+    },
+    {
+      id: "vestido-estampado-azul-tam-m-2025",
+      title: "Vestido Estampado Azul",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/vestido-estampado-azul-tam-m-2025.jpg",
+      category: "feminino",
+      badge: "M"
+    },
+    {
+      id: "vestido-feminino-vermelho-tam-u-2025",
+      title: "Vestido Feminino Vermelho",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/vestido-feminino-vermelho-tam-u-2025.jpg",
+      category: "feminino",
+      badge: "U"
+    },
+    {
+      id: "vestido-laranja-2025",
+      title: "Vestido Laranja",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/vestido-laranja-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-preto-2025",
+      title: "Vestido Preto",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/vestido-preto-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-verde-alinhado-2025",
+      title: "Vestido Verde Alinhado",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/vestido-verde-alinhado-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-verde-feminino-2025",
+      title: "Vestido Verde Feminino",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/vestido-verde-feminino-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-vermelho-adulto-2025",
+      title: "Vestido Vermelho",
+      price: 20.0,
+      image: "assets/img/fotos-femininas/vestido-vermelho-adulto.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-vermelho-claro-2025",
+      title: "Vestido Vermelho Claro",
+      price: 25.0,
+      image: "assets/img/fotos-femininas/vestido-vermelho-claro-2025.jpg",
+      category: "feminino"
+    },
+    {
+      id: "vestido-vermelho-simples-2025",
+      title: "Vestido Vermelho Liso",
+      price: 15.0,
+      image: "assets/img/fotos-femininas/vestido-vermelho-simples-2025.jpg",
+      category: "feminino",
+      //stock: 0 // ESGOTADO
+    },
+    {
+      id: "vestido-vermelho-tam-m-2025",
+      title: "Vestido Vermelho",
+      price: 30.0,
+      image: "assets/img/fotos-femininas/vestido-vermelho-tam-m-2025.jpg",
+      category: "feminino",
+      badge: "M"
+    },
+
 
   // CRIANÇAS
-  { id: "tenis-bibi-azul",   title: "Tênis Bibi Azul", price: 20.0, image: "assets/img/fotos-infantis/tenis-bibi-azul.jpeg", category: "criancas", badge: "23/24" },
-  { id: "conj-dream",        title: "Conjunto Infantil Dream Calça", price: 15.0, image: "assets/img/fotos-infantis/conjunto-infantil-dream-calça.jpeg", category: "criancas" },
-  { id: "biquini",           title: "Biquini Infantil", price: 10.0, image: "assets/img/fotos-infantis/biquini-inantil.jpeg", category: "criancas" },
-  { id: "conj-magic-girl",   title: "Conjunto Infantil Magic Girl", price: 15.0, image: "assets/img/fotos-infantis/conjunto-infantil-magic_girl.jpeg", category: "criancas" },
-  { id: "conj-rosa",         title: "Conjunto Infantil Rosa", price: 15.0, image: "assets/img/fotos-infantis/conjunto-infantil-rosa.jpeg", category: "criancas" },
-  { id: "conj-seja-feliz",   title: "Conjunto Infantil Seja Feliz", price: 15.0, image: "assets/img/fotos-infantis/conjunto-infantil-seja_feliz.jpeg", category: "criancas" },
-  { id: "conj-surf",         title: "Conjunto Infantil Surf Clube", price: 15.0, image: "assets/img/fotos-infantis/conjunto-infantil-surf-clube.jpeg", category: "criancas" },
-  { id: "conj-moletom-lilas",title: "Conjunto Moletom Lilás", price: 20.0, image: "assets/img/fotos-infantis/conjunto-moletom-lilas.jpeg", category: "criancas" },
-  { id: "maio-unicornio",    title: "Maiô Unicórnio", price: 10.0, image: "assets/img/fotos-infantis/maiô-unicornio.jpeg", category: "criancas" },
-  { id: "macacao-rosa",      title: "Macacão Infantil Rosa", price: 15.0, image: "assets/img/fotos-infantis/macacão-rosa.jpeg", category: "criancas" },
-  { id: "sandalia-lilas",    title: "Sandália Infantil Lilás", price: 15.0, image: "assets/img/fotos-infantis/sandalia-infantil-lilas.jpeg", category: "criancas" },
-  { id: "sapato-rosa",       title: "Sapato Infantil Rosa", price: 20.0, image: "assets/img/fotos-infantis/sapato-rosa.jpeg", category: "criancas" },
-  { id: "tenis-bibi-azul-2", title: "Tênis Bibi", price: 20.0, image: "assets/img/fotos-infantis/tenis-bibi-azul-2.jpeg", category: "criancas", badge: "23/24" },
-  { id: "tenis-ouro",        title: "Tênis Infantil Ouro", price: 20.0, image: "assets/img/fotos-infantis/tenis-infantil-ouro.jpeg", category: "criancas", badge: "23/24" },
-  { id: "vestido-abacaxi",   title: "Vestido Infantil Abacaxi", price: 10.0, image: "assets/img/fotos-infantis/vestido-abacaxi.jpeg", category: "criancas" },
-  { id: "vestido-branco",    title: "Vestido Infantil Branco", price: 10.0, image: "assets/img/fotos-infantis/vestido-branco.jpeg", category: "criancas" },
-  { id: "vestido-colorido",  title: "Vestido Infantil Colorido", price: 15.0, image: "assets/img/fotos-infantis/vestido-colorido.jpeg", category: "criancas" },
-  { id: "vestido-listrado",  title: "Vestido Infantil Listrado", price: 10.0, image: "assets/img/fotos-infantis/vestido-listrado.jpeg", category: "criancas" },
-  { id: "vestido-rosa-anagua", title: "Vestido Infantil Rosa", price: 20.0, image: "assets/img/fotos-infantis/vestido-rosa-anagua.jpeg", category: "criancas" },
-  { id: "vestido-rosa-tuli", title: "Vestido Infantil", price: 20.0, image: "assets/img/fotos-infantis/vestido-rosa-tuli.jpeg", category: "criancas" },
-  { id: "sandalia-melissa-ouro",  title: "Sandália Melissa Ouro", price: 15.0, image: "assets/img/fotos-infantis/Sandália Melissa Ouro.jpeg", category: "criancas", badge: "21/22" },
-  { id: "sandalia-melissa-preta", title: "Sandália Melissa Preta", price: 15.0, image: "assets/img/fotos-infantis/Sandália Melissa Preta.jpeg", category: "criancas", badge: "23/24" },
-  { id: "sandalia-bibi-rosa",     title: "Sandália Bibi Rosa", price: 15.0, image: "assets/img/fotos-infantis/Sandália Bibi Rosa.jpeg", category: "criancas", badge: "23/24" },
-  { id: "crocs-branca",           title: "Crocs Infantil Branca", price: 30.0, image: "assets/img/fotos-infantis/Crocs Infantil Branca.jpeg", category: "criancas", badge: "23/24", stock: 0 }, // ESGOTADO
+  { id: "bermuda-vermelha-infantil-2025", title: "Bermuda Vermelha Infantil", price: 15.0, image: "assets/img/fotos-infantis/bermuda-vermelha-infantil-2025.jpg", category: "infantil" },
+  { id: "biquinis-infantil-2025",         title: "Biquínis Infantil",         price: 20.0, image: "assets/img/fotos-infantis/biquinis-infantil-2025.jpg",         category: "infantil" },
+  { id: "camisa-infantil-4anos-2025",     title: "Camisa Infantil 4 anos",     price: 15.0, image: "assets/img/fotos-infantis/camisa-infantil-4anos-2025.jpg",     category: "infantil", badge: "4 anos" },
+  { id: "conj-infantil-branco-2025",      title: "Conjunto Infantil Branco",   price: 15.0, image: "assets/img/fotos-infantis/conj-infantil-branco-2025.jpg",      category: "infantil" },
+  { id: "conj-infantil-lilas-g-2025",     title: "Conjunto Infantil Lilás",    price: 20.0, image: "assets/img/fotos-infantis/conj-infantil-lilas-g-2025.jpg",     category: "infantil", badge: "G" },
+  { id: "conj-infantil-lilas-m-2025",     title: "Conjunto Infantil Lilás",    price: 20.0, image: "assets/img/fotos-infantis/conj-infantil-lilas-m-2025.jpg",     category: "infantil", badge: "M" },
+  { id: "macaquinho-vermelho-infantil-2025", title: "Macaquinho Vermelho Infantil", price: 20.0, image: "assets/img/fotos-infantis/macaquinho-vermelho-infantil-2025.jpg", category: "infantil" },
+  { id: "vestido-azul-estampado-infantil-2025", title: "Vestido Azul Estampado Infantil", price: 20.0, image: "assets/img/fotos-infantis/vestido-azul-estampado-infantil-2025.jpg", category: "infantil" },
+  { id: "vestido-infantil-estampado-2025", title: "Vestido Infantil Estampado", price: 20.0, image: "assets/img/fotos-infantis/vestido-infantil-estampado-2025.jpg", category: "infantil" },
+  { id: "vestido-infantil-lilas-2025",    title: "Vestido Infantil Lilás",     price: 25.0, image: "assets/img/fotos-infantis/vestido-infantil-lilas-2025.jpg",    category: "infantil" },
+  { id: "vestido-infantil-vermelho-2025", title: "Vestido Infantil Vermelho",  price: 20.0, image: "assets/img/fotos-infantis/vestido-infantil-vermelho-2025.jpg", category: "infantil" },
+  { id: "vestido-rosa-infantil-2025",     title: "Vestido Rosa Infantil",      price: 20.0, image: "assets/img/fotos-infantis/vestido-rosa-infantil-2025.jpg",     category: "infantil" },
+  { id: "vestido-rosa-vermelho-infantil-2025", title: "Vestido Rosa/Vermelho Infantil", price: 20.0, image: "assets/img/fotos-infantis/vestido-rosa-vermelho-infantil-2025.jpg", category: "infantil" },
+  { id: "vestido-stitch-infantil-2025",   title: "Vestido Stitch Infantil",    price: 20.0, image: "assets/img/fotos-infantis/vestido-stitch-infantil-2025.jpg",   category: "infantil" },
+  { id: "vestido-vermelho-infantil-2025", title: "Vestido Vermelho Infantil",  price: 20.0, image: "assets/img/fotos-infantis/vestido-vermelho-infantil-2025.jpg", category: "infantil" },
 
   // MASCULINO (ajuste os caminhos das imagens)
-  { id: "camiseta-preta-m",  title: "Camiseta Básica Preta", price: 20.0, image: "assets/img/fotos-masculinas/camiseta-preta.jpg", category: "masculino", badge: "M" },
-  { id: "bermuda-jeans-42",  title: "Bermuda Jeans", price: 25.0, image: "assets/img/fotos-masculinas/bermuda-jeans-42.jpg", category: "masculino", badge: "42" },
-  { id: "sapatenis-41",      title: "Sapatênis Marrom", price: 30.0, image: "assets/img/fotos-masculinas/sapatenis-marrom-41.jpg", category: "masculino", badge: "41" }
+  { id: "bermuda-diversas-2025",          title: "Bermudas Diversas",          price: 15.0, image: "assets/img/fotos-masculinas/bermuda-diversas-2025.jpg",          category: "masculino" },
+  { id: "bermuda-jeans-tam-36-2025",      title: "Bermuda Jeans",              price: 20.0, image: "assets/img/fotos-masculinas/bermuda-jeans-tam-36-2025.jpg",      category: "masculino", badge: "36" },
+  { id: "bermuda-jeans-tam-44-2025",      title: "Bermuda Jeans",              price: 20.0, image: "assets/img/fotos-masculinas/bermuda-jeans-tam-44-2025.jpg",      category: "masculino", badge: "44" },
+  { id: "bermuda-seaway-2025",            title: "Bermuda Seaway",             price: 15.0, image: "assets/img/fotos-masculinas/bermuda-seaway-2025.jpg",            category: "masculino" },
+  { id: "blusa-camiseta-masculina",       title: "Camiseta Masculina",         price: 12.0, image: "assets/img/fotos-masculinas/blusa-camiseta-masculina.jpg",       category: "masculino" },
+  { id: "camisa-lacoste-masculina-2025",  title: "Camisa Lacoste Masculina",   price: 15.0, image: "assets/img/fotos-masculinas/camisa-lacoste-masculina-2025.jpg",  category: "masculino" },
+  { id: "sunga-diversos-2025",            title: "Sungas Diversas",            price: 12.0, image: "assets/img/fotos-masculinas/sunga-diversos-2025.jpg",            category: "masculino" }
 ];
 
 
