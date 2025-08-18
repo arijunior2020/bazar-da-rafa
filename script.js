@@ -235,14 +235,14 @@ const products = [
     {
       id: "croped-estampado-preto-2025",
       title: "Cropped Estampado Preto",
-      price: 20.0,
+      price: 15.0,
       image: "assets/img/fotos-femininas/croped-estampado-preto-2025.jpg",
       category: "feminino"
     },
     {
       id: "croped-estampado-preto-tam-m-2025",
       title: "Cropped Estampado Preto",
-      price: 15.0,
+      price: 20.0,
       image: "assets/img/fotos-femininas/croped-estampado-preto-tam-m-2025.jpg",
       category: "feminino",
       badge: "M"
